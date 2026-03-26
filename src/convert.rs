@@ -1,10 +1,17 @@
 use crate::ffi;
 use crate::types::*;
 use num_traits::cast::FromPrimitive;
+use core::slice;
+#[cfg(not(feature = "std"))]
+use alloc::{
+    string::{String, ToString},
+    vec::Vec,
+    boxed::Box,
+};
 
 unsafe fn ffi_slice_from_raw_parts<'a, T>(data: *const T, len: usize) -> &'a [T] {
     if len > 0 {
-        std::slice::from_raw_parts(data, len)
+        slice::from_raw_parts(data, len)
     } else {
         &[]
     }
@@ -391,7 +398,7 @@ pub(crate) fn ffi_to_format(ffi_type: ffi::SpvReflectFormat) -> ReflectFormat {
 }
 
 pub(crate) fn ffi_to_storage_class(ffi_type: ffi::SpvStorageClass) -> ReflectStorageClass {
-    if ffi_type as u32 == std::u32::MAX {
+    if ffi_type as u32 == u32::MAX {
         return ReflectStorageClass::Undefined;
     }
 
@@ -413,7 +420,6 @@ pub(crate) fn ffi_to_storage_class(ffi_type: ffi::SpvStorageClass) -> ReflectSto
         ffi::SpvStorageClass__SpvStorageClassStorageBuffer => ReflectStorageClass::StorageBuffer,
         ffi::SpvStorageClass__SpvStorageClassMax => ReflectStorageClass::Undefined,
         _ => {
-            println!("value is {}", ffi_type);
             unimplemented!()
         }
     }

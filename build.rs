@@ -38,6 +38,7 @@ fn main() {
 #[cfg(feature = "generate_bindings")]
 fn generate_bindings(output_file: &str) {
     let bindings = bindgen::Builder::default()
+        .use_core()
         .header("vendor/spirv_reflect.h")
         .size_t_is_usize(true)
         .blocklist_type("__darwin_.*")

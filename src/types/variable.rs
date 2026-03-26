@@ -4,6 +4,11 @@ use crate::types::image::ReflectFormat;
 use crate::types::op::{ReflectBuiltIn, ReflectOp};
 use crate::types::traits::*;
 
+#[cfg(not(feature = "std"))]
+use alloc::{string::String, vec::Vec};
+#[cfg(feature = "std")]
+use std::{string::String, vec::Vec};
+
 bitflags! {
     #[derive(Serialize)]
     pub struct ReflectDecorationFlags: u32 {

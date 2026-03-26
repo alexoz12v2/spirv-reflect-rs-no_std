@@ -2,7 +2,7 @@
 
 pub const SPV_VERSION: u32 = 67072;
 pub const SPV_REVISION: u32 = 1;
-pub type SpvId = ::std::os::raw::c_uint;
+pub type SpvId = ::core::ffi::c_uint;
 pub const SpvSourceLanguage__SpvSourceLanguageUnknown: SpvSourceLanguage_ = 0;
 pub const SpvSourceLanguage__SpvSourceLanguageESSL: SpvSourceLanguage_ = 1;
 pub const SpvSourceLanguage__SpvSourceLanguageGLSL: SpvSourceLanguage_ = 2;
@@ -14,7 +14,7 @@ pub const SpvSourceLanguage__SpvSourceLanguageSYCL: SpvSourceLanguage_ = 7;
 pub const SpvSourceLanguage__SpvSourceLanguageHERO_C: SpvSourceLanguage_ = 8;
 pub const SpvSourceLanguage__SpvSourceLanguageNZSL: SpvSourceLanguage_ = 9;
 pub const SpvSourceLanguage__SpvSourceLanguageMax: SpvSourceLanguage_ = 2147483647;
-pub type SpvSourceLanguage_ = ::std::os::raw::c_uint;
+pub type SpvSourceLanguage_ = ::core::ffi::c_uint;
 pub use self::SpvSourceLanguage_ as SpvSourceLanguage;
 pub const SpvExecutionModel__SpvExecutionModelVertex: SpvExecutionModel_ = 0;
 pub const SpvExecutionModel__SpvExecutionModelTessellationControl: SpvExecutionModel_ = 1;
@@ -40,7 +40,7 @@ pub const SpvExecutionModel__SpvExecutionModelCallableNV: SpvExecutionModel_ = 5
 pub const SpvExecutionModel__SpvExecutionModelTaskEXT: SpvExecutionModel_ = 5364;
 pub const SpvExecutionModel__SpvExecutionModelMeshEXT: SpvExecutionModel_ = 5365;
 pub const SpvExecutionModel__SpvExecutionModelMax: SpvExecutionModel_ = 2147483647;
-pub type SpvExecutionModel_ = ::std::os::raw::c_uint;
+pub type SpvExecutionModel_ = ::core::ffi::c_uint;
 pub use self::SpvExecutionModel_ as SpvExecutionModel;
 pub const SpvAddressingModel__SpvAddressingModelLogical: SpvAddressingModel_ = 0;
 pub const SpvAddressingModel__SpvAddressingModelPhysical32: SpvAddressingModel_ = 1;
@@ -49,7 +49,7 @@ pub const SpvAddressingModel__SpvAddressingModelPhysicalStorageBuffer64: SpvAddr
 pub const SpvAddressingModel__SpvAddressingModelPhysicalStorageBuffer64EXT: SpvAddressingModel_ =
     5348;
 pub const SpvAddressingModel__SpvAddressingModelMax: SpvAddressingModel_ = 2147483647;
-pub type SpvAddressingModel_ = ::std::os::raw::c_uint;
+pub type SpvAddressingModel_ = ::core::ffi::c_uint;
 pub use self::SpvAddressingModel_ as SpvAddressingModel;
 pub const SpvMemoryModel__SpvMemoryModelSimple: SpvMemoryModel_ = 0;
 pub const SpvMemoryModel__SpvMemoryModelGLSL450: SpvMemoryModel_ = 1;
@@ -57,7 +57,7 @@ pub const SpvMemoryModel__SpvMemoryModelOpenCL: SpvMemoryModel_ = 2;
 pub const SpvMemoryModel__SpvMemoryModelVulkan: SpvMemoryModel_ = 3;
 pub const SpvMemoryModel__SpvMemoryModelVulkanKHR: SpvMemoryModel_ = 3;
 pub const SpvMemoryModel__SpvMemoryModelMax: SpvMemoryModel_ = 2147483647;
-pub type SpvMemoryModel_ = ::std::os::raw::c_uint;
+pub type SpvMemoryModel_ = ::core::ffi::c_uint;
 pub use self::SpvMemoryModel_ as SpvMemoryModel;
 pub const SpvExecutionMode__SpvExecutionModeInvocations: SpvExecutionMode_ = 0;
 pub const SpvExecutionMode__SpvExecutionModeSpacingEqual: SpvExecutionMode_ = 1;
@@ -148,7 +148,7 @@ pub const SpvExecutionMode__SpvExecutionModeStreamingInterfaceINTEL: SpvExecutio
 pub const SpvExecutionMode__SpvExecutionModeRegisterMapInterfaceINTEL: SpvExecutionMode_ = 6160;
 pub const SpvExecutionMode__SpvExecutionModeNamedBarrierCountINTEL: SpvExecutionMode_ = 6417;
 pub const SpvExecutionMode__SpvExecutionModeMax: SpvExecutionMode_ = 2147483647;
-pub type SpvExecutionMode_ = ::std::os::raw::c_uint;
+pub type SpvExecutionMode_ = ::core::ffi::c_uint;
 pub use self::SpvExecutionMode_ as SpvExecutionMode;
 pub const SpvStorageClass__SpvStorageClassUniformConstant: SpvStorageClass_ = 0;
 pub const SpvStorageClass__SpvStorageClassInput: SpvStorageClass_ = 1;
@@ -184,7 +184,7 @@ pub const SpvStorageClass__SpvStorageClassCodeSectionINTEL: SpvStorageClass_ = 5
 pub const SpvStorageClass__SpvStorageClassDeviceOnlyINTEL: SpvStorageClass_ = 5936;
 pub const SpvStorageClass__SpvStorageClassHostOnlyINTEL: SpvStorageClass_ = 5937;
 pub const SpvStorageClass__SpvStorageClassMax: SpvStorageClass_ = 2147483647;
-pub type SpvStorageClass_ = ::std::os::raw::c_uint;
+pub type SpvStorageClass_ = ::core::ffi::c_uint;
 pub use self::SpvStorageClass_ as SpvStorageClass;
 pub const SpvDim__SpvDim1D: SpvDim_ = 0;
 pub const SpvDim__SpvDim2D: SpvDim_ = 1;
@@ -195,7 +195,7 @@ pub const SpvDim__SpvDimBuffer: SpvDim_ = 5;
 pub const SpvDim__SpvDimSubpassData: SpvDim_ = 6;
 pub const SpvDim__SpvDimTileImageDataEXT: SpvDim_ = 4173;
 pub const SpvDim__SpvDimMax: SpvDim_ = 2147483647;
-pub type SpvDim_ = ::std::os::raw::c_uint;
+pub type SpvDim_ = ::core::ffi::c_uint;
 pub use self::SpvDim_ as SpvDim;
 pub const SpvSamplerAddressingMode__SpvSamplerAddressingModeNone: SpvSamplerAddressingMode_ = 0;
 pub const SpvSamplerAddressingMode__SpvSamplerAddressingModeClampToEdge: SpvSamplerAddressingMode_ =
@@ -206,12 +206,12 @@ pub const SpvSamplerAddressingMode__SpvSamplerAddressingModeRepeatMirrored:
     SpvSamplerAddressingMode_ = 4;
 pub const SpvSamplerAddressingMode__SpvSamplerAddressingModeMax: SpvSamplerAddressingMode_ =
     2147483647;
-pub type SpvSamplerAddressingMode_ = ::std::os::raw::c_uint;
+pub type SpvSamplerAddressingMode_ = ::core::ffi::c_uint;
 pub use self::SpvSamplerAddressingMode_ as SpvSamplerAddressingMode;
 pub const SpvSamplerFilterMode__SpvSamplerFilterModeNearest: SpvSamplerFilterMode_ = 0;
 pub const SpvSamplerFilterMode__SpvSamplerFilterModeLinear: SpvSamplerFilterMode_ = 1;
 pub const SpvSamplerFilterMode__SpvSamplerFilterModeMax: SpvSamplerFilterMode_ = 2147483647;
-pub type SpvSamplerFilterMode_ = ::std::os::raw::c_uint;
+pub type SpvSamplerFilterMode_ = ::core::ffi::c_uint;
 pub use self::SpvSamplerFilterMode_ as SpvSamplerFilterMode;
 pub const SpvImageFormat__SpvImageFormatUnknown: SpvImageFormat_ = 0;
 pub const SpvImageFormat__SpvImageFormatRgba32f: SpvImageFormat_ = 1;
@@ -256,7 +256,7 @@ pub const SpvImageFormat__SpvImageFormatR8ui: SpvImageFormat_ = 39;
 pub const SpvImageFormat__SpvImageFormatR64ui: SpvImageFormat_ = 40;
 pub const SpvImageFormat__SpvImageFormatR64i: SpvImageFormat_ = 41;
 pub const SpvImageFormat__SpvImageFormatMax: SpvImageFormat_ = 2147483647;
-pub type SpvImageFormat_ = ::std::os::raw::c_uint;
+pub type SpvImageFormat_ = ::core::ffi::c_uint;
 pub use self::SpvImageFormat_ as SpvImageFormat;
 pub const SpvImageChannelOrder__SpvImageChannelOrderR: SpvImageChannelOrder_ = 0;
 pub const SpvImageChannelOrder__SpvImageChannelOrderA: SpvImageChannelOrder_ = 1;
@@ -279,7 +279,7 @@ pub const SpvImageChannelOrder__SpvImageChannelOrdersRGBA: SpvImageChannelOrder_
 pub const SpvImageChannelOrder__SpvImageChannelOrdersBGRA: SpvImageChannelOrder_ = 18;
 pub const SpvImageChannelOrder__SpvImageChannelOrderABGR: SpvImageChannelOrder_ = 19;
 pub const SpvImageChannelOrder__SpvImageChannelOrderMax: SpvImageChannelOrder_ = 2147483647;
-pub type SpvImageChannelOrder_ = ::std::os::raw::c_uint;
+pub type SpvImageChannelOrder_ = ::core::ffi::c_uint;
 pub use self::SpvImageChannelOrder_ as SpvImageChannelOrder;
 pub const SpvImageChannelDataType__SpvImageChannelDataTypeSnormInt8: SpvImageChannelDataType_ = 0;
 pub const SpvImageChannelDataType__SpvImageChannelDataTypeSnormInt16: SpvImageChannelDataType_ = 1;
@@ -311,7 +311,7 @@ pub const SpvImageChannelDataType__SpvImageChannelDataTypeUnsignedIntRaw12EXT:
     SpvImageChannelDataType_ = 20;
 pub const SpvImageChannelDataType__SpvImageChannelDataTypeMax: SpvImageChannelDataType_ =
     2147483647;
-pub type SpvImageChannelDataType_ = ::std::os::raw::c_uint;
+pub type SpvImageChannelDataType_ = ::core::ffi::c_uint;
 pub use self::SpvImageChannelDataType_ as SpvImageChannelDataType;
 pub const SpvImageOperandsShift__SpvImageOperandsBiasShift: SpvImageOperandsShift_ = 0;
 pub const SpvImageOperandsShift__SpvImageOperandsLodShift: SpvImageOperandsShift_ = 1;
@@ -338,7 +338,7 @@ pub const SpvImageOperandsShift__SpvImageOperandsZeroExtendShift: SpvImageOperan
 pub const SpvImageOperandsShift__SpvImageOperandsNontemporalShift: SpvImageOperandsShift_ = 14;
 pub const SpvImageOperandsShift__SpvImageOperandsOffsetsShift: SpvImageOperandsShift_ = 16;
 pub const SpvImageOperandsShift__SpvImageOperandsMax: SpvImageOperandsShift_ = 2147483647;
-pub type SpvImageOperandsShift_ = ::std::os::raw::c_uint;
+pub type SpvImageOperandsShift_ = ::core::ffi::c_uint;
 pub use self::SpvImageOperandsShift_ as SpvImageOperandsShift;
 pub const SpvImageOperandsMask__SpvImageOperandsMaskNone: SpvImageOperandsMask_ = 0;
 pub const SpvImageOperandsMask__SpvImageOperandsBiasMask: SpvImageOperandsMask_ = 1;
@@ -364,7 +364,7 @@ pub const SpvImageOperandsMask__SpvImageOperandsSignExtendMask: SpvImageOperands
 pub const SpvImageOperandsMask__SpvImageOperandsZeroExtendMask: SpvImageOperandsMask_ = 8192;
 pub const SpvImageOperandsMask__SpvImageOperandsNontemporalMask: SpvImageOperandsMask_ = 16384;
 pub const SpvImageOperandsMask__SpvImageOperandsOffsetsMask: SpvImageOperandsMask_ = 65536;
-pub type SpvImageOperandsMask_ = ::std::os::raw::c_uint;
+pub type SpvImageOperandsMask_ = ::core::ffi::c_uint;
 pub use self::SpvImageOperandsMask_ as SpvImageOperandsMask;
 pub const SpvFPFastMathModeShift__SpvFPFastMathModeNotNaNShift: SpvFPFastMathModeShift_ = 0;
 pub const SpvFPFastMathModeShift__SpvFPFastMathModeNotInfShift: SpvFPFastMathModeShift_ = 1;
@@ -376,7 +376,7 @@ pub const SpvFPFastMathModeShift__SpvFPFastMathModeAllowContractFastINTELShift:
 pub const SpvFPFastMathModeShift__SpvFPFastMathModeAllowReassocINTELShift: SpvFPFastMathModeShift_ =
     17;
 pub const SpvFPFastMathModeShift__SpvFPFastMathModeMax: SpvFPFastMathModeShift_ = 2147483647;
-pub type SpvFPFastMathModeShift_ = ::std::os::raw::c_uint;
+pub type SpvFPFastMathModeShift_ = ::core::ffi::c_uint;
 pub use self::SpvFPFastMathModeShift_ as SpvFPFastMathModeShift;
 pub const SpvFPFastMathModeMask__SpvFPFastMathModeMaskNone: SpvFPFastMathModeMask_ = 0;
 pub const SpvFPFastMathModeMask__SpvFPFastMathModeNotNaNMask: SpvFPFastMathModeMask_ = 1;
@@ -388,26 +388,26 @@ pub const SpvFPFastMathModeMask__SpvFPFastMathModeAllowContractFastINTELMask:
     SpvFPFastMathModeMask_ = 65536;
 pub const SpvFPFastMathModeMask__SpvFPFastMathModeAllowReassocINTELMask: SpvFPFastMathModeMask_ =
     131072;
-pub type SpvFPFastMathModeMask_ = ::std::os::raw::c_uint;
+pub type SpvFPFastMathModeMask_ = ::core::ffi::c_uint;
 pub use self::SpvFPFastMathModeMask_ as SpvFPFastMathModeMask;
 pub const SpvFPRoundingMode__SpvFPRoundingModeRTE: SpvFPRoundingMode_ = 0;
 pub const SpvFPRoundingMode__SpvFPRoundingModeRTZ: SpvFPRoundingMode_ = 1;
 pub const SpvFPRoundingMode__SpvFPRoundingModeRTP: SpvFPRoundingMode_ = 2;
 pub const SpvFPRoundingMode__SpvFPRoundingModeRTN: SpvFPRoundingMode_ = 3;
 pub const SpvFPRoundingMode__SpvFPRoundingModeMax: SpvFPRoundingMode_ = 2147483647;
-pub type SpvFPRoundingMode_ = ::std::os::raw::c_uint;
+pub type SpvFPRoundingMode_ = ::core::ffi::c_uint;
 pub use self::SpvFPRoundingMode_ as SpvFPRoundingMode;
 pub const SpvLinkageType__SpvLinkageTypeExport: SpvLinkageType_ = 0;
 pub const SpvLinkageType__SpvLinkageTypeImport: SpvLinkageType_ = 1;
 pub const SpvLinkageType__SpvLinkageTypeLinkOnceODR: SpvLinkageType_ = 2;
 pub const SpvLinkageType__SpvLinkageTypeMax: SpvLinkageType_ = 2147483647;
-pub type SpvLinkageType_ = ::std::os::raw::c_uint;
+pub type SpvLinkageType_ = ::core::ffi::c_uint;
 pub use self::SpvLinkageType_ as SpvLinkageType;
 pub const SpvAccessQualifier__SpvAccessQualifierReadOnly: SpvAccessQualifier_ = 0;
 pub const SpvAccessQualifier__SpvAccessQualifierWriteOnly: SpvAccessQualifier_ = 1;
 pub const SpvAccessQualifier__SpvAccessQualifierReadWrite: SpvAccessQualifier_ = 2;
 pub const SpvAccessQualifier__SpvAccessQualifierMax: SpvAccessQualifier_ = 2147483647;
-pub type SpvAccessQualifier_ = ::std::os::raw::c_uint;
+pub type SpvAccessQualifier_ = ::core::ffi::c_uint;
 pub use self::SpvAccessQualifier_ as SpvAccessQualifier;
 pub const SpvFunctionParameterAttribute__SpvFunctionParameterAttributeZext:
     SpvFunctionParameterAttribute_ = 0;
@@ -429,7 +429,7 @@ pub const SpvFunctionParameterAttribute__SpvFunctionParameterAttributeRuntimeAli
     SpvFunctionParameterAttribute_ = 5940;
 pub const SpvFunctionParameterAttribute__SpvFunctionParameterAttributeMax:
     SpvFunctionParameterAttribute_ = 2147483647;
-pub type SpvFunctionParameterAttribute_ = ::std::os::raw::c_uint;
+pub type SpvFunctionParameterAttribute_ = ::core::ffi::c_uint;
 pub use self::SpvFunctionParameterAttribute_ as SpvFunctionParameterAttribute;
 pub const SpvDecoration__SpvDecorationRelaxedPrecision: SpvDecoration_ = 0;
 pub const SpvDecoration__SpvDecorationSpecId: SpvDecoration_ = 1;
@@ -562,7 +562,7 @@ pub const SpvDecoration__SpvDecorationMMHostInterfaceMaxBurstINTEL: SpvDecoratio
 pub const SpvDecoration__SpvDecorationMMHostInterfaceWaitRequestINTEL: SpvDecoration_ = 6182;
 pub const SpvDecoration__SpvDecorationStableKernelArgumentINTEL: SpvDecoration_ = 6183;
 pub const SpvDecoration__SpvDecorationMax: SpvDecoration_ = 2147483647;
-pub type SpvDecoration_ = ::std::os::raw::c_uint;
+pub type SpvDecoration_ = ::core::ffi::c_uint;
 pub use self::SpvDecoration_ as SpvDecoration;
 pub const SpvBuiltIn__SpvBuiltInPosition: SpvBuiltIn_ = 0;
 pub const SpvBuiltIn__SpvBuiltInPointSize: SpvBuiltIn_ = 1;
@@ -697,18 +697,18 @@ pub const SpvBuiltIn__SpvBuiltInWarpIDNV: SpvBuiltIn_ = 5376;
 pub const SpvBuiltIn__SpvBuiltInSMIDNV: SpvBuiltIn_ = 5377;
 pub const SpvBuiltIn__SpvBuiltInCullMaskKHR: SpvBuiltIn_ = 6021;
 pub const SpvBuiltIn__SpvBuiltInMax: SpvBuiltIn_ = 2147483647;
-pub type SpvBuiltIn_ = ::std::os::raw::c_uint;
+pub type SpvBuiltIn_ = ::core::ffi::c_uint;
 pub use self::SpvBuiltIn_ as SpvBuiltIn;
 pub const SpvSelectionControlShift__SpvSelectionControlFlattenShift: SpvSelectionControlShift_ = 0;
 pub const SpvSelectionControlShift__SpvSelectionControlDontFlattenShift: SpvSelectionControlShift_ =
     1;
 pub const SpvSelectionControlShift__SpvSelectionControlMax: SpvSelectionControlShift_ = 2147483647;
-pub type SpvSelectionControlShift_ = ::std::os::raw::c_uint;
+pub type SpvSelectionControlShift_ = ::core::ffi::c_uint;
 pub use self::SpvSelectionControlShift_ as SpvSelectionControlShift;
 pub const SpvSelectionControlMask__SpvSelectionControlMaskNone: SpvSelectionControlMask_ = 0;
 pub const SpvSelectionControlMask__SpvSelectionControlFlattenMask: SpvSelectionControlMask_ = 1;
 pub const SpvSelectionControlMask__SpvSelectionControlDontFlattenMask: SpvSelectionControlMask_ = 2;
-pub type SpvSelectionControlMask_ = ::std::os::raw::c_uint;
+pub type SpvSelectionControlMask_ = ::core::ffi::c_uint;
 pub use self::SpvSelectionControlMask_ as SpvSelectionControlMask;
 pub const SpvLoopControlShift__SpvLoopControlUnrollShift: SpvLoopControlShift_ = 0;
 pub const SpvLoopControlShift__SpvLoopControlDontUnrollShift: SpvLoopControlShift_ = 1;
@@ -733,7 +733,7 @@ pub const SpvLoopControlShift__SpvLoopControlLoopCountINTELShift: SpvLoopControl
 pub const SpvLoopControlShift__SpvLoopControlMaxReinvocationDelayINTELShift: SpvLoopControlShift_ =
     25;
 pub const SpvLoopControlShift__SpvLoopControlMax: SpvLoopControlShift_ = 2147483647;
-pub type SpvLoopControlShift_ = ::std::os::raw::c_uint;
+pub type SpvLoopControlShift_ = ::core::ffi::c_uint;
 pub use self::SpvLoopControlShift_ as SpvLoopControlShift;
 pub const SpvLoopControlMask__SpvLoopControlMaskNone: SpvLoopControlMask_ = 0;
 pub const SpvLoopControlMask__SpvLoopControlUnrollMask: SpvLoopControlMask_ = 1;
@@ -758,7 +758,7 @@ pub const SpvLoopControlMask__SpvLoopControlNoFusionINTELMask: SpvLoopControlMas
 pub const SpvLoopControlMask__SpvLoopControlLoopCountINTELMask: SpvLoopControlMask_ = 16777216;
 pub const SpvLoopControlMask__SpvLoopControlMaxReinvocationDelayINTELMask: SpvLoopControlMask_ =
     33554432;
-pub type SpvLoopControlMask_ = ::std::os::raw::c_uint;
+pub type SpvLoopControlMask_ = ::core::ffi::c_uint;
 pub use self::SpvLoopControlMask_ as SpvLoopControlMask;
 pub const SpvFunctionControlShift__SpvFunctionControlInlineShift: SpvFunctionControlShift_ = 0;
 pub const SpvFunctionControlShift__SpvFunctionControlDontInlineShift: SpvFunctionControlShift_ = 1;
@@ -767,7 +767,7 @@ pub const SpvFunctionControlShift__SpvFunctionControlConstShift: SpvFunctionCont
 pub const SpvFunctionControlShift__SpvFunctionControlOptNoneINTELShift: SpvFunctionControlShift_ =
     16;
 pub const SpvFunctionControlShift__SpvFunctionControlMax: SpvFunctionControlShift_ = 2147483647;
-pub type SpvFunctionControlShift_ = ::std::os::raw::c_uint;
+pub type SpvFunctionControlShift_ = ::core::ffi::c_uint;
 pub use self::SpvFunctionControlShift_ as SpvFunctionControlShift;
 pub const SpvFunctionControlMask__SpvFunctionControlMaskNone: SpvFunctionControlMask_ = 0;
 pub const SpvFunctionControlMask__SpvFunctionControlInlineMask: SpvFunctionControlMask_ = 1;
@@ -776,7 +776,7 @@ pub const SpvFunctionControlMask__SpvFunctionControlPureMask: SpvFunctionControl
 pub const SpvFunctionControlMask__SpvFunctionControlConstMask: SpvFunctionControlMask_ = 8;
 pub const SpvFunctionControlMask__SpvFunctionControlOptNoneINTELMask: SpvFunctionControlMask_ =
     65536;
-pub type SpvFunctionControlMask_ = ::std::os::raw::c_uint;
+pub type SpvFunctionControlMask_ = ::core::ffi::c_uint;
 pub use self::SpvFunctionControlMask_ as SpvFunctionControlMask;
 pub const SpvMemorySemanticsShift__SpvMemorySemanticsAcquireShift: SpvMemorySemanticsShift_ = 1;
 pub const SpvMemorySemanticsShift__SpvMemorySemanticsReleaseShift: SpvMemorySemanticsShift_ = 2;
@@ -810,7 +810,7 @@ pub const SpvMemorySemanticsShift__SpvMemorySemanticsMakeVisibleKHRShift: SpvMem
     14;
 pub const SpvMemorySemanticsShift__SpvMemorySemanticsVolatileShift: SpvMemorySemanticsShift_ = 15;
 pub const SpvMemorySemanticsShift__SpvMemorySemanticsMax: SpvMemorySemanticsShift_ = 2147483647;
-pub type SpvMemorySemanticsShift_ = ::std::os::raw::c_uint;
+pub type SpvMemorySemanticsShift_ = ::core::ffi::c_uint;
 pub use self::SpvMemorySemanticsShift_ as SpvMemorySemanticsShift;
 pub const SpvMemorySemanticsMask__SpvMemorySemanticsMaskNone: SpvMemorySemanticsMask_ = 0;
 pub const SpvMemorySemanticsMask__SpvMemorySemanticsAcquireMask: SpvMemorySemanticsMask_ = 2;
@@ -841,7 +841,7 @@ pub const SpvMemorySemanticsMask__SpvMemorySemanticsMakeVisibleMask: SpvMemorySe
 pub const SpvMemorySemanticsMask__SpvMemorySemanticsMakeVisibleKHRMask: SpvMemorySemanticsMask_ =
     16384;
 pub const SpvMemorySemanticsMask__SpvMemorySemanticsVolatileMask: SpvMemorySemanticsMask_ = 32768;
-pub type SpvMemorySemanticsMask_ = ::std::os::raw::c_uint;
+pub type SpvMemorySemanticsMask_ = ::core::ffi::c_uint;
 pub use self::SpvMemorySemanticsMask_ as SpvMemorySemanticsMask;
 pub const SpvMemoryAccessShift__SpvMemoryAccessVolatileShift: SpvMemoryAccessShift_ = 0;
 pub const SpvMemoryAccessShift__SpvMemoryAccessAlignedShift: SpvMemoryAccessShift_ = 1;
@@ -857,7 +857,7 @@ pub const SpvMemoryAccessShift__SpvMemoryAccessNonPrivatePointerKHRShift: SpvMem
 pub const SpvMemoryAccessShift__SpvMemoryAccessAliasScopeINTELMaskShift: SpvMemoryAccessShift_ = 16;
 pub const SpvMemoryAccessShift__SpvMemoryAccessNoAliasINTELMaskShift: SpvMemoryAccessShift_ = 17;
 pub const SpvMemoryAccessShift__SpvMemoryAccessMax: SpvMemoryAccessShift_ = 2147483647;
-pub type SpvMemoryAccessShift_ = ::std::os::raw::c_uint;
+pub type SpvMemoryAccessShift_ = ::core::ffi::c_uint;
 pub use self::SpvMemoryAccessShift_ as SpvMemoryAccessShift;
 pub const SpvMemoryAccessMask__SpvMemoryAccessMaskNone: SpvMemoryAccessMask_ = 0;
 pub const SpvMemoryAccessMask__SpvMemoryAccessVolatileMask: SpvMemoryAccessMask_ = 1;
@@ -871,7 +871,7 @@ pub const SpvMemoryAccessMask__SpvMemoryAccessNonPrivatePointerMask: SpvMemoryAc
 pub const SpvMemoryAccessMask__SpvMemoryAccessNonPrivatePointerKHRMask: SpvMemoryAccessMask_ = 32;
 pub const SpvMemoryAccessMask__SpvMemoryAccessAliasScopeINTELMaskMask: SpvMemoryAccessMask_ = 65536;
 pub const SpvMemoryAccessMask__SpvMemoryAccessNoAliasINTELMaskMask: SpvMemoryAccessMask_ = 131072;
-pub type SpvMemoryAccessMask_ = ::std::os::raw::c_uint;
+pub type SpvMemoryAccessMask_ = ::core::ffi::c_uint;
 pub use self::SpvMemoryAccessMask_ as SpvMemoryAccessMask;
 pub const SpvScope__SpvScopeCrossDevice: SpvScope_ = 0;
 pub const SpvScope__SpvScopeDevice: SpvScope_ = 1;
@@ -882,7 +882,7 @@ pub const SpvScope__SpvScopeQueueFamily: SpvScope_ = 5;
 pub const SpvScope__SpvScopeQueueFamilyKHR: SpvScope_ = 5;
 pub const SpvScope__SpvScopeShaderCallKHR: SpvScope_ = 6;
 pub const SpvScope__SpvScopeMax: SpvScope_ = 2147483647;
-pub type SpvScope_ = ::std::os::raw::c_uint;
+pub type SpvScope_ = ::core::ffi::c_uint;
 pub use self::SpvScope_ as SpvScope;
 pub const SpvGroupOperation__SpvGroupOperationReduce: SpvGroupOperation_ = 0;
 pub const SpvGroupOperation__SpvGroupOperationInclusiveScan: SpvGroupOperation_ = 1;
@@ -892,25 +892,25 @@ pub const SpvGroupOperation__SpvGroupOperationPartitionedReduceNV: SpvGroupOpera
 pub const SpvGroupOperation__SpvGroupOperationPartitionedInclusiveScanNV: SpvGroupOperation_ = 7;
 pub const SpvGroupOperation__SpvGroupOperationPartitionedExclusiveScanNV: SpvGroupOperation_ = 8;
 pub const SpvGroupOperation__SpvGroupOperationMax: SpvGroupOperation_ = 2147483647;
-pub type SpvGroupOperation_ = ::std::os::raw::c_uint;
+pub type SpvGroupOperation_ = ::core::ffi::c_uint;
 pub use self::SpvGroupOperation_ as SpvGroupOperation;
 pub const SpvKernelEnqueueFlags__SpvKernelEnqueueFlagsNoWait: SpvKernelEnqueueFlags_ = 0;
 pub const SpvKernelEnqueueFlags__SpvKernelEnqueueFlagsWaitKernel: SpvKernelEnqueueFlags_ = 1;
 pub const SpvKernelEnqueueFlags__SpvKernelEnqueueFlagsWaitWorkGroup: SpvKernelEnqueueFlags_ = 2;
 pub const SpvKernelEnqueueFlags__SpvKernelEnqueueFlagsMax: SpvKernelEnqueueFlags_ = 2147483647;
-pub type SpvKernelEnqueueFlags_ = ::std::os::raw::c_uint;
+pub type SpvKernelEnqueueFlags_ = ::core::ffi::c_uint;
 pub use self::SpvKernelEnqueueFlags_ as SpvKernelEnqueueFlags;
 pub const SpvKernelProfilingInfoShift__SpvKernelProfilingInfoCmdExecTimeShift:
     SpvKernelProfilingInfoShift_ = 0;
 pub const SpvKernelProfilingInfoShift__SpvKernelProfilingInfoMax: SpvKernelProfilingInfoShift_ =
     2147483647;
-pub type SpvKernelProfilingInfoShift_ = ::std::os::raw::c_uint;
+pub type SpvKernelProfilingInfoShift_ = ::core::ffi::c_uint;
 pub use self::SpvKernelProfilingInfoShift_ as SpvKernelProfilingInfoShift;
 pub const SpvKernelProfilingInfoMask__SpvKernelProfilingInfoMaskNone: SpvKernelProfilingInfoMask_ =
     0;
 pub const SpvKernelProfilingInfoMask__SpvKernelProfilingInfoCmdExecTimeMask:
     SpvKernelProfilingInfoMask_ = 1;
-pub type SpvKernelProfilingInfoMask_ = ::std::os::raw::c_uint;
+pub type SpvKernelProfilingInfoMask_ = ::core::ffi::c_uint;
 pub use self::SpvKernelProfilingInfoMask_ as SpvKernelProfilingInfoMask;
 pub const SpvCapability__SpvCapabilityMatrix: SpvCapability_ = 0;
 pub const SpvCapability__SpvCapabilityShader: SpvCapability_ = 1;
@@ -1169,7 +1169,7 @@ pub const SpvCapability__SpvCapabilityFPGALatencyControlINTEL: SpvCapability_ = 
 pub const SpvCapability__SpvCapabilityFPGAArgumentInterfacesINTEL: SpvCapability_ = 6174;
 pub const SpvCapability__SpvCapabilityGroupUniformArithmeticKHR: SpvCapability_ = 6400;
 pub const SpvCapability__SpvCapabilityMax: SpvCapability_ = 2147483647;
-pub type SpvCapability_ = ::std::os::raw::c_uint;
+pub type SpvCapability_ = ::core::ffi::c_uint;
 pub use self::SpvCapability_ as SpvCapability;
 pub const SpvRayFlagsShift__SpvRayFlagsOpaqueKHRShift: SpvRayFlagsShift_ = 0;
 pub const SpvRayFlagsShift__SpvRayFlagsNoOpaqueKHRShift: SpvRayFlagsShift_ = 1;
@@ -1183,7 +1183,7 @@ pub const SpvRayFlagsShift__SpvRayFlagsSkipTrianglesKHRShift: SpvRayFlagsShift_ 
 pub const SpvRayFlagsShift__SpvRayFlagsSkipAABBsKHRShift: SpvRayFlagsShift_ = 9;
 pub const SpvRayFlagsShift__SpvRayFlagsForceOpacityMicromap2StateEXTShift: SpvRayFlagsShift_ = 10;
 pub const SpvRayFlagsShift__SpvRayFlagsMax: SpvRayFlagsShift_ = 2147483647;
-pub type SpvRayFlagsShift_ = ::std::os::raw::c_uint;
+pub type SpvRayFlagsShift_ = ::core::ffi::c_uint;
 pub use self::SpvRayFlagsShift_ as SpvRayFlagsShift;
 pub const SpvRayFlagsMask__SpvRayFlagsMaskNone: SpvRayFlagsMask_ = 0;
 pub const SpvRayFlagsMask__SpvRayFlagsOpaqueKHRMask: SpvRayFlagsMask_ = 1;
@@ -1197,7 +1197,7 @@ pub const SpvRayFlagsMask__SpvRayFlagsCullNoOpaqueKHRMask: SpvRayFlagsMask_ = 12
 pub const SpvRayFlagsMask__SpvRayFlagsSkipTrianglesKHRMask: SpvRayFlagsMask_ = 256;
 pub const SpvRayFlagsMask__SpvRayFlagsSkipAABBsKHRMask: SpvRayFlagsMask_ = 512;
 pub const SpvRayFlagsMask__SpvRayFlagsForceOpacityMicromap2StateEXTMask: SpvRayFlagsMask_ = 1024;
-pub type SpvRayFlagsMask_ = ::std::os::raw::c_uint;
+pub type SpvRayFlagsMask_ = ::core::ffi::c_uint;
 pub use self::SpvRayFlagsMask_ as SpvRayFlagsMask;
 pub const SpvRayQueryIntersection__SpvRayQueryIntersectionRayQueryCandidateIntersectionKHR:
     SpvRayQueryIntersection_ = 0;
@@ -1205,20 +1205,20 @@ pub const SpvRayQueryIntersection__SpvRayQueryIntersectionRayQueryCommittedInter
     SpvRayQueryIntersection_ = 1;
 pub const SpvRayQueryIntersection__SpvRayQueryIntersectionMax: SpvRayQueryIntersection_ =
     2147483647;
-pub type SpvRayQueryIntersection_ = ::std::os::raw::c_uint;
+pub type SpvRayQueryIntersection_ = ::core::ffi::c_uint;
 pub use self::SpvRayQueryIntersection_ as SpvRayQueryIntersection;
 pub const SpvRayQueryCommittedIntersectionType__SpvRayQueryCommittedIntersectionTypeRayQueryCommittedIntersectionNoneKHR : SpvRayQueryCommittedIntersectionType_ = 0 ;
 pub const SpvRayQueryCommittedIntersectionType__SpvRayQueryCommittedIntersectionTypeRayQueryCommittedIntersectionTriangleKHR : SpvRayQueryCommittedIntersectionType_ = 1 ;
 pub const SpvRayQueryCommittedIntersectionType__SpvRayQueryCommittedIntersectionTypeRayQueryCommittedIntersectionGeneratedKHR : SpvRayQueryCommittedIntersectionType_ = 2 ;
 pub const SpvRayQueryCommittedIntersectionType__SpvRayQueryCommittedIntersectionTypeMax:
     SpvRayQueryCommittedIntersectionType_ = 2147483647;
-pub type SpvRayQueryCommittedIntersectionType_ = ::std::os::raw::c_uint;
+pub type SpvRayQueryCommittedIntersectionType_ = ::core::ffi::c_uint;
 pub use self::SpvRayQueryCommittedIntersectionType_ as SpvRayQueryCommittedIntersectionType;
 pub const SpvRayQueryCandidateIntersectionType__SpvRayQueryCandidateIntersectionTypeRayQueryCandidateIntersectionTriangleKHR : SpvRayQueryCandidateIntersectionType_ = 0 ;
 pub const SpvRayQueryCandidateIntersectionType__SpvRayQueryCandidateIntersectionTypeRayQueryCandidateIntersectionAABBKHR : SpvRayQueryCandidateIntersectionType_ = 1 ;
 pub const SpvRayQueryCandidateIntersectionType__SpvRayQueryCandidateIntersectionTypeMax:
     SpvRayQueryCandidateIntersectionType_ = 2147483647;
-pub type SpvRayQueryCandidateIntersectionType_ = ::std::os::raw::c_uint;
+pub type SpvRayQueryCandidateIntersectionType_ = ::core::ffi::c_uint;
 pub use self::SpvRayQueryCandidateIntersectionType_ as SpvRayQueryCandidateIntersectionType;
 pub const SpvFragmentShadingRateShift__SpvFragmentShadingRateVertical2PixelsShift:
     SpvFragmentShadingRateShift_ = 0;
@@ -1230,7 +1230,7 @@ pub const SpvFragmentShadingRateShift__SpvFragmentShadingRateHorizontal4PixelsSh
     SpvFragmentShadingRateShift_ = 3;
 pub const SpvFragmentShadingRateShift__SpvFragmentShadingRateMax: SpvFragmentShadingRateShift_ =
     2147483647;
-pub type SpvFragmentShadingRateShift_ = ::std::os::raw::c_uint;
+pub type SpvFragmentShadingRateShift_ = ::core::ffi::c_uint;
 pub use self::SpvFragmentShadingRateShift_ as SpvFragmentShadingRateShift;
 pub const SpvFragmentShadingRateMask__SpvFragmentShadingRateMaskNone: SpvFragmentShadingRateMask_ =
     0;
@@ -1242,17 +1242,17 @@ pub const SpvFragmentShadingRateMask__SpvFragmentShadingRateHorizontal2PixelsMas
     SpvFragmentShadingRateMask_ = 4;
 pub const SpvFragmentShadingRateMask__SpvFragmentShadingRateHorizontal4PixelsMask:
     SpvFragmentShadingRateMask_ = 8;
-pub type SpvFragmentShadingRateMask_ = ::std::os::raw::c_uint;
+pub type SpvFragmentShadingRateMask_ = ::core::ffi::c_uint;
 pub use self::SpvFragmentShadingRateMask_ as SpvFragmentShadingRateMask;
 pub const SpvFPDenormMode__SpvFPDenormModePreserve: SpvFPDenormMode_ = 0;
 pub const SpvFPDenormMode__SpvFPDenormModeFlushToZero: SpvFPDenormMode_ = 1;
 pub const SpvFPDenormMode__SpvFPDenormModeMax: SpvFPDenormMode_ = 2147483647;
-pub type SpvFPDenormMode_ = ::std::os::raw::c_uint;
+pub type SpvFPDenormMode_ = ::core::ffi::c_uint;
 pub use self::SpvFPDenormMode_ as SpvFPDenormMode;
 pub const SpvFPOperationMode__SpvFPOperationModeIEEE: SpvFPOperationMode_ = 0;
 pub const SpvFPOperationMode__SpvFPOperationModeALT: SpvFPOperationMode_ = 1;
 pub const SpvFPOperationMode__SpvFPOperationModeMax: SpvFPOperationMode_ = 2147483647;
-pub type SpvFPOperationMode_ = ::std::os::raw::c_uint;
+pub type SpvFPOperationMode_ = ::core::ffi::c_uint;
 pub use self::SpvFPOperationMode_ as SpvFPOperationMode;
 pub const SpvQuantizationModes__SpvQuantizationModesTRN: SpvQuantizationModes_ = 0;
 pub const SpvQuantizationModes__SpvQuantizationModesTRN_ZERO: SpvQuantizationModes_ = 1;
@@ -1263,21 +1263,21 @@ pub const SpvQuantizationModes__SpvQuantizationModesRND_MIN_INF: SpvQuantization
 pub const SpvQuantizationModes__SpvQuantizationModesRND_CONV: SpvQuantizationModes_ = 6;
 pub const SpvQuantizationModes__SpvQuantizationModesRND_CONV_ODD: SpvQuantizationModes_ = 7;
 pub const SpvQuantizationModes__SpvQuantizationModesMax: SpvQuantizationModes_ = 2147483647;
-pub type SpvQuantizationModes_ = ::std::os::raw::c_uint;
+pub type SpvQuantizationModes_ = ::core::ffi::c_uint;
 pub use self::SpvQuantizationModes_ as SpvQuantizationModes;
 pub const SpvOverflowModes__SpvOverflowModesWRAP: SpvOverflowModes_ = 0;
 pub const SpvOverflowModes__SpvOverflowModesSAT: SpvOverflowModes_ = 1;
 pub const SpvOverflowModes__SpvOverflowModesSAT_ZERO: SpvOverflowModes_ = 2;
 pub const SpvOverflowModes__SpvOverflowModesSAT_SYM: SpvOverflowModes_ = 3;
 pub const SpvOverflowModes__SpvOverflowModesMax: SpvOverflowModes_ = 2147483647;
-pub type SpvOverflowModes_ = ::std::os::raw::c_uint;
+pub type SpvOverflowModes_ = ::core::ffi::c_uint;
 pub use self::SpvOverflowModes_ as SpvOverflowModes;
 pub const SpvPackedVectorFormat__SpvPackedVectorFormatPackedVectorFormat4x8Bit:
     SpvPackedVectorFormat_ = 0;
 pub const SpvPackedVectorFormat__SpvPackedVectorFormatPackedVectorFormat4x8BitKHR:
     SpvPackedVectorFormat_ = 0;
 pub const SpvPackedVectorFormat__SpvPackedVectorFormatMax: SpvPackedVectorFormat_ = 2147483647;
-pub type SpvPackedVectorFormat_ = ::std::os::raw::c_uint;
+pub type SpvPackedVectorFormat_ = ::core::ffi::c_uint;
 pub use self::SpvPackedVectorFormat_ as SpvPackedVectorFormat;
 pub const SpvCooperativeMatrixOperandsShift__SpvCooperativeMatrixOperandsMatrixASignedComponentsShift : SpvCooperativeMatrixOperandsShift_ = 0 ;
 pub const SpvCooperativeMatrixOperandsShift__SpvCooperativeMatrixOperandsMatrixBSignedComponentsShift : SpvCooperativeMatrixOperandsShift_ = 1 ;
@@ -1286,7 +1286,7 @@ pub const SpvCooperativeMatrixOperandsShift__SpvCooperativeMatrixOperandsMatrixR
 pub const SpvCooperativeMatrixOperandsShift__SpvCooperativeMatrixOperandsSaturatingAccumulationShift : SpvCooperativeMatrixOperandsShift_ = 4 ;
 pub const SpvCooperativeMatrixOperandsShift__SpvCooperativeMatrixOperandsMax:
     SpvCooperativeMatrixOperandsShift_ = 2147483647;
-pub type SpvCooperativeMatrixOperandsShift_ = ::std::os::raw::c_uint;
+pub type SpvCooperativeMatrixOperandsShift_ = ::core::ffi::c_uint;
 pub use self::SpvCooperativeMatrixOperandsShift_ as SpvCooperativeMatrixOperandsShift;
 pub const SpvCooperativeMatrixOperandsMask__SpvCooperativeMatrixOperandsMaskNone:
     SpvCooperativeMatrixOperandsMask_ = 0;
@@ -1295,7 +1295,7 @@ pub const SpvCooperativeMatrixOperandsMask__SpvCooperativeMatrixOperandsMatrixBS
 pub const SpvCooperativeMatrixOperandsMask__SpvCooperativeMatrixOperandsMatrixCSignedComponentsMask : SpvCooperativeMatrixOperandsMask_ = 4 ;
 pub const SpvCooperativeMatrixOperandsMask__SpvCooperativeMatrixOperandsMatrixResultSignedComponentsMask : SpvCooperativeMatrixOperandsMask_ = 8 ;
 pub const SpvCooperativeMatrixOperandsMask__SpvCooperativeMatrixOperandsSaturatingAccumulationMask : SpvCooperativeMatrixOperandsMask_ = 16 ;
-pub type SpvCooperativeMatrixOperandsMask_ = ::std::os::raw::c_uint;
+pub type SpvCooperativeMatrixOperandsMask_ = ::core::ffi::c_uint;
 pub use self::SpvCooperativeMatrixOperandsMask_ as SpvCooperativeMatrixOperandsMask;
 pub const SpvCooperativeMatrixLayout__SpvCooperativeMatrixLayoutRowMajorKHR:
     SpvCooperativeMatrixLayout_ = 0;
@@ -1303,7 +1303,7 @@ pub const SpvCooperativeMatrixLayout__SpvCooperativeMatrixLayoutColumnMajorKHR:
     SpvCooperativeMatrixLayout_ = 1;
 pub const SpvCooperativeMatrixLayout__SpvCooperativeMatrixLayoutMax: SpvCooperativeMatrixLayout_ =
     2147483647;
-pub type SpvCooperativeMatrixLayout_ = ::std::os::raw::c_uint;
+pub type SpvCooperativeMatrixLayout_ = ::core::ffi::c_uint;
 pub use self::SpvCooperativeMatrixLayout_ as SpvCooperativeMatrixLayout;
 pub const SpvCooperativeMatrixUse__SpvCooperativeMatrixUseMatrixAKHR: SpvCooperativeMatrixUse_ = 0;
 pub const SpvCooperativeMatrixUse__SpvCooperativeMatrixUseMatrixBKHR: SpvCooperativeMatrixUse_ = 1;
@@ -1311,7 +1311,7 @@ pub const SpvCooperativeMatrixUse__SpvCooperativeMatrixUseMatrixAccumulatorKHR:
     SpvCooperativeMatrixUse_ = 2;
 pub const SpvCooperativeMatrixUse__SpvCooperativeMatrixUseMax: SpvCooperativeMatrixUse_ =
     2147483647;
-pub type SpvCooperativeMatrixUse_ = ::std::os::raw::c_uint;
+pub type SpvCooperativeMatrixUse_ = ::core::ffi::c_uint;
 pub use self::SpvCooperativeMatrixUse_ as SpvCooperativeMatrixUse;
 pub const SpvOp__SpvOpNop: SpvOp_ = 0;
 pub const SpvOp__SpvOpUndef: SpvOp_ = 1;
@@ -2039,7 +2039,7 @@ pub const SpvOp__SpvOpGroupLogicalAndKHR: SpvOp_ = 6406;
 pub const SpvOp__SpvOpGroupLogicalOrKHR: SpvOp_ = 6407;
 pub const SpvOp__SpvOpGroupLogicalXorKHR: SpvOp_ = 6408;
 pub const SpvOp__SpvOpMax: SpvOp_ = 2147483647;
-pub type SpvOp_ = ::std::os::raw::c_uint;
+pub type SpvOp_ = ::core::ffi::c_uint;
 pub use self::SpvOp_ as SpvOp;
 pub const SpvReflectResult_SPV_REFLECT_RESULT_SUCCESS: SpvReflectResult = 0;
 pub const SpvReflectResult_SPV_REFLECT_RESULT_NOT_READY: SpvReflectResult = 1;
@@ -2074,11 +2074,11 @@ pub const SpvReflectResult_SPV_REFLECT_RESULT_ERROR_SPIRV_INVALID_EXECUTION_MODE
 pub const SpvReflectResult_SPV_REFLECT_RESULT_ERROR_SPIRV_MAX_RECURSIVE_EXCEEDED: SpvReflectResult =
     21;
 #[doc = " @enum SpvReflectResult"]
-pub type SpvReflectResult = ::std::os::raw::c_uint;
+pub type SpvReflectResult = ::core::ffi::c_uint;
 pub const SpvReflectModuleFlagBits_SPV_REFLECT_MODULE_FLAG_NONE: SpvReflectModuleFlagBits = 0;
 pub const SpvReflectModuleFlagBits_SPV_REFLECT_MODULE_FLAG_NO_COPY: SpvReflectModuleFlagBits = 1;
 #[doc = " @enum SpvReflectModuleFlagBits\n\nSPV_REFLECT_MODULE_FLAG_NO_COPY - Disables copying of SPIR-V code\nwhen a SPIRV-Reflect shader module is created. It is the\nresponsibility of the calling program to ensure that the pointer\nremains valid and the memory it's pointing to is not freed while\nSPIRV-Reflect operations are taking place. Freeing the backing\nmemory will cause undefined behavior or most likely a crash.\nThis is flag is intended for cases where the memory overhead of\nstoring the copied SPIR-V is undesirable."]
-pub type SpvReflectModuleFlagBits = ::std::os::raw::c_uint;
+pub type SpvReflectModuleFlagBits = ::core::ffi::c_uint;
 pub type SpvReflectModuleFlags = u32;
 pub const SpvReflectTypeFlagBits_SPV_REFLECT_TYPE_FLAG_UNDEFINED: SpvReflectTypeFlagBits = 0;
 pub const SpvReflectTypeFlagBits_SPV_REFLECT_TYPE_FLAG_VOID: SpvReflectTypeFlagBits = 1;
@@ -2103,7 +2103,7 @@ pub const SpvReflectTypeFlagBits_SPV_REFLECT_TYPE_FLAG_STRUCT: SpvReflectTypeFla
 pub const SpvReflectTypeFlagBits_SPV_REFLECT_TYPE_FLAG_ARRAY: SpvReflectTypeFlagBits = 536870912;
 pub const SpvReflectTypeFlagBits_SPV_REFLECT_TYPE_FLAG_REF: SpvReflectTypeFlagBits = 1073741824;
 #[doc = " @enum SpvReflectTypeFlagBits"]
-pub type SpvReflectTypeFlagBits = ::std::os::raw::c_uint;
+pub type SpvReflectTypeFlagBits = ::core::ffi::c_uint;
 pub type SpvReflectTypeFlags = u32;
 pub const SpvReflectDecorationFlagBits_SPV_REFLECT_DECORATION_NONE: SpvReflectDecorationFlagBits =
     0;
@@ -2138,7 +2138,7 @@ pub const SpvReflectDecorationFlagBits_SPV_REFLECT_DECORATION_WEIGHT_TEXTURE:
 pub const SpvReflectDecorationFlagBits_SPV_REFLECT_DECORATION_BLOCK_MATCH_TEXTURE:
     SpvReflectDecorationFlagBits = 16384;
 #[doc = " @enum SpvReflectDecorationBits\n\nNOTE: HLSL row_major and column_major decorations are reversed\nin SPIR-V. Meaning that matrices declrations with row_major\nwill get reflected as column_major and vice versa. The\nrow and column decorations get appied during the compilation.\nSPIRV-Reflect reads the data as is and does not make any\nattempt to correct it to match what's in the source.\n\nThe Patch, PerVertex, and PerTask are used for Interface\nvariables that can have array"]
-pub type SpvReflectDecorationFlagBits = ::std::os::raw::c_uint;
+pub type SpvReflectDecorationFlagBits = ::core::ffi::c_uint;
 pub type SpvReflectDecorationFlags = u32;
 pub const SpvReflectUserType_SPV_REFLECT_USER_TYPE_INVALID: SpvReflectUserType = 0;
 pub const SpvReflectUserType_SPV_REFLECT_USER_TYPE_CBUFFER: SpvReflectUserType = 1;
@@ -2190,14 +2190,14 @@ pub const SpvReflectUserType_SPV_REFLECT_USER_TYPE_TEXTURE_3D: SpvReflectUserTyp
 pub const SpvReflectUserType_SPV_REFLECT_USER_TYPE_TEXTURE_BUFFER: SpvReflectUserType = 37;
 pub const SpvReflectUserType_SPV_REFLECT_USER_TYPE_TEXTURE_CUBE: SpvReflectUserType = 38;
 pub const SpvReflectUserType_SPV_REFLECT_USER_TYPE_TEXTURE_CUBE_ARRAY: SpvReflectUserType = 39;
-pub type SpvReflectUserType = ::std::os::raw::c_uint;
+pub type SpvReflectUserType = ::core::ffi::c_uint;
 pub const SpvReflectResourceType_SPV_REFLECT_RESOURCE_FLAG_UNDEFINED: SpvReflectResourceType = 0;
 pub const SpvReflectResourceType_SPV_REFLECT_RESOURCE_FLAG_SAMPLER: SpvReflectResourceType = 1;
 pub const SpvReflectResourceType_SPV_REFLECT_RESOURCE_FLAG_CBV: SpvReflectResourceType = 2;
 pub const SpvReflectResourceType_SPV_REFLECT_RESOURCE_FLAG_SRV: SpvReflectResourceType = 4;
 pub const SpvReflectResourceType_SPV_REFLECT_RESOURCE_FLAG_UAV: SpvReflectResourceType = 8;
 #[doc = " @enum SpvReflectResourceType"]
-pub type SpvReflectResourceType = ::std::os::raw::c_uint;
+pub type SpvReflectResourceType = ::core::ffi::c_uint;
 pub const SpvReflectFormat_SPV_REFLECT_FORMAT_UNDEFINED: SpvReflectFormat = 0;
 pub const SpvReflectFormat_SPV_REFLECT_FORMAT_R16_UINT: SpvReflectFormat = 74;
 pub const SpvReflectFormat_SPV_REFLECT_FORMAT_R16_SINT: SpvReflectFormat = 75;
@@ -2236,7 +2236,7 @@ pub const SpvReflectFormat_SPV_REFLECT_FORMAT_R64G64B64A64_UINT: SpvReflectForma
 pub const SpvReflectFormat_SPV_REFLECT_FORMAT_R64G64B64A64_SINT: SpvReflectFormat = 120;
 pub const SpvReflectFormat_SPV_REFLECT_FORMAT_R64G64B64A64_SFLOAT: SpvReflectFormat = 121;
 #[doc = " @enum SpvReflectFormat"]
-pub type SpvReflectFormat = ::std::os::raw::c_uint;
+pub type SpvReflectFormat = ::core::ffi::c_uint;
 pub const SpvReflectVariableFlagBits_SPV_REFLECT_VARIABLE_FLAGS_NONE: SpvReflectVariableFlagBits =
     0;
 pub const SpvReflectVariableFlagBits_SPV_REFLECT_VARIABLE_FLAGS_UNUSED: SpvReflectVariableFlagBits =
@@ -2244,7 +2244,7 @@ pub const SpvReflectVariableFlagBits_SPV_REFLECT_VARIABLE_FLAGS_UNUSED: SpvRefle
 pub const SpvReflectVariableFlagBits_SPV_REFLECT_VARIABLE_FLAGS_PHYSICAL_POINTER_COPY:
     SpvReflectVariableFlagBits = 2;
 #[doc = " @enum SpvReflectVariableFlagBits"]
-pub type SpvReflectVariableFlagBits = ::std::os::raw::c_uint;
+pub type SpvReflectVariableFlagBits = ::core::ffi::c_uint;
 pub type SpvReflectVariableFlags = u32;
 pub const SpvReflectDescriptorType_SPV_REFLECT_DESCRIPTOR_TYPE_SAMPLER: SpvReflectDescriptorType =
     0;
@@ -2271,7 +2271,7 @@ pub const SpvReflectDescriptorType_SPV_REFLECT_DESCRIPTOR_TYPE_INPUT_ATTACHMENT:
 pub const SpvReflectDescriptorType_SPV_REFLECT_DESCRIPTOR_TYPE_ACCELERATION_STRUCTURE_KHR:
     SpvReflectDescriptorType = 1000150000;
 #[doc = " @enum SpvReflectDescriptorType"]
-pub type SpvReflectDescriptorType = ::std::os::raw::c_uint;
+pub type SpvReflectDescriptorType = ::core::ffi::c_uint;
 pub const SpvReflectShaderStageFlagBits_SPV_REFLECT_SHADER_STAGE_VERTEX_BIT:
     SpvReflectShaderStageFlagBits = 1;
 pub const SpvReflectShaderStageFlagBits_SPV_REFLECT_SHADER_STAGE_TESSELLATION_CONTROL_BIT:
@@ -2305,7 +2305,7 @@ pub const SpvReflectShaderStageFlagBits_SPV_REFLECT_SHADER_STAGE_INTERSECTION_BI
 pub const SpvReflectShaderStageFlagBits_SPV_REFLECT_SHADER_STAGE_CALLABLE_BIT_KHR:
     SpvReflectShaderStageFlagBits = 8192;
 #[doc = " @enum SpvReflectShaderStageFlagBits"]
-pub type SpvReflectShaderStageFlagBits = ::std::os::raw::c_uint;
+pub type SpvReflectShaderStageFlagBits = ::core::ffi::c_uint;
 pub const SpvReflectGenerator_SPV_REFLECT_GENERATOR_KHRONOS_LLVM_SPIRV_TRANSLATOR:
     SpvReflectGenerator = 6;
 pub const SpvReflectGenerator_SPV_REFLECT_GENERATOR_KHRONOS_SPIRV_TOOLS_ASSEMBLER:
@@ -2325,13 +2325,13 @@ pub const SpvReflectGenerator_SPV_REFLECT_GENERATOR_WINE_VKD3D_SHADER_COMPILER:
 pub const SpvReflectGenerator_SPV_REFLECT_GENERATOR_CLAY_CLAY_SHADER_COMPILER: SpvReflectGenerator =
     19;
 #[doc = " @enum SpvReflectGenerator"]
-pub type SpvReflectGenerator = ::std::os::raw::c_uint;
+pub type SpvReflectGenerator = ::core::ffi::c_uint;
 pub const SPV_REFLECT_MAX_ARRAY_DIMS: _bindgen_ty_1 = 32;
 pub const SPV_REFLECT_MAX_DESCRIPTOR_SETS: _bindgen_ty_1 = 64;
-pub type _bindgen_ty_1 = ::std::os::raw::c_uint;
+pub type _bindgen_ty_1 = ::core::ffi::c_uint;
 pub const SPV_REFLECT_BINDING_NUMBER_DONT_CHANGE: _bindgen_ty_2 = -1;
 pub const SPV_REFLECT_SET_NUMBER_DONT_CHANGE: _bindgen_ty_2 = -1;
-pub type _bindgen_ty_2 = ::std::os::raw::c_int;
+pub type _bindgen_ty_2 = ::core::ffi::c_int;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct SpvReflectNumericTraits {
@@ -2368,7 +2368,7 @@ pub struct SpvReflectImageTraits {
     pub image_format: SpvImageFormat,
 }
 pub const SpvReflectArrayDimType_SPV_REFLECT_ARRAY_DIM_RUNTIME: SpvReflectArrayDimType = 0;
-pub type SpvReflectArrayDimType = ::std::os::raw::c_uint;
+pub type SpvReflectArrayDimType = ::core::ffi::c_uint;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct SpvReflectArrayTraits {
@@ -2389,8 +2389,8 @@ pub struct SpvReflectBindingArrayTraits {
 pub struct SpvReflectTypeDescription {
     pub id: u32,
     pub op: SpvOp,
-    pub type_name: *const ::std::os::raw::c_char,
-    pub struct_member_name: *const ::std::os::raw::c_char,
+    pub type_name: *const ::core::ffi::c_char,
+    pub struct_member_name: *const ::core::ffi::c_char,
     pub storage_class: SpvStorageClass,
     pub type_flags: SpvReflectTypeFlags,
     pub decoration_flags: SpvReflectDecorationFlags,
@@ -2412,11 +2412,11 @@ pub struct SpvReflectTypeDescription_Traits {
 #[derive(Debug, Copy, Clone)]
 pub struct SpvReflectInterfaceVariable {
     pub spirv_id: u32,
-    pub name: *const ::std::os::raw::c_char,
+    pub name: *const ::core::ffi::c_char,
     pub location: u32,
     pub component: u32,
     pub storage_class: SpvStorageClass,
-    pub semantic: *const ::std::os::raw::c_char,
+    pub semantic: *const ::core::ffi::c_char,
     pub decoration_flags: SpvReflectDecorationFlags,
     pub built_in: SpvBuiltIn,
     pub numeric: SpvReflectNumericTraits,
@@ -2437,7 +2437,7 @@ pub struct SpvReflectInterfaceVariable__bindgen_ty_1 {
 #[derive(Debug, Copy, Clone)]
 pub struct SpvReflectBlockVariable {
     pub spirv_id: u32,
-    pub name: *const ::std::os::raw::c_char,
+    pub name: *const ::core::ffi::c_char,
     pub offset: u32,
     pub absolute_offset: u32,
     pub size: u32,
@@ -2461,7 +2461,7 @@ pub struct SpvReflectBlockVariable__bindgen_ty_1 {
 #[derive(Debug, Copy, Clone)]
 pub struct SpvReflectDescriptorBinding {
     pub spirv_id: u32,
-    pub name: *const ::std::os::raw::c_char,
+    pub name: *const ::core::ffi::c_char,
     pub binding: u32,
     pub input_attachment_index: u32,
     pub set: u32,
@@ -2497,12 +2497,12 @@ pub struct SpvReflectDescriptorSet {
 }
 pub const SpvReflectExecutionModeValue_SPV_REFLECT_EXECUTION_MODE_SPEC_CONSTANT:
     SpvReflectExecutionModeValue = 4294967295;
-pub type SpvReflectExecutionModeValue = ::std::os::raw::c_uint;
+pub type SpvReflectExecutionModeValue = ::core::ffi::c_uint;
 #[doc = " @struct SpvReflectEntryPoint\n"]
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct SpvReflectEntryPoint {
-    pub name: *const ::std::os::raw::c_char,
+    pub name: *const ::core::ffi::c_char,
     pub id: u32,
     pub spirv_execution_model: SpvExecutionModel,
     pub shader_stage: SpvReflectShaderStageFlagBits,
@@ -2544,21 +2544,21 @@ pub struct SpvReflectCapability {
 pub struct SpvReflectSpecializationConstant {
     pub spirv_id: u32,
     pub constant_id: u32,
-    pub name: *const ::std::os::raw::c_char,
+    pub name: *const ::core::ffi::c_char,
 }
 #[doc = " @struct SpvReflectShaderModule"]
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct SpvReflectShaderModule {
     pub generator: SpvReflectGenerator,
-    pub entry_point_name: *const ::std::os::raw::c_char,
+    pub entry_point_name: *const ::core::ffi::c_char,
     pub entry_point_id: u32,
     pub entry_point_count: u32,
     pub entry_points: *mut SpvReflectEntryPoint,
     pub source_language: SpvSourceLanguage,
     pub source_language_version: u32,
-    pub source_file: *const ::std::os::raw::c_char,
-    pub source_source: *const ::std::os::raw::c_char,
+    pub source_file: *const ::core::ffi::c_char,
+    pub source_source: *const ::core::ffi::c_char,
     pub capability_count: u32,
     pub capabilities: *mut SpvReflectCapability,
     pub spirv_execution_model: SpvExecutionModel,
@@ -2593,7 +2593,7 @@ extern "C" {
     #[doc = " @fn spvReflectCreateShaderModule\n\n@param  size      Size in bytes of SPIR-V code.\n@param  p_code    Pointer to SPIR-V code.\n@param  p_module  Pointer to an instance of SpvReflectShaderModule.\n@return           SPV_REFLECT_RESULT_SUCCESS on success."]
     pub fn spvReflectCreateShaderModule(
         size: usize,
-        p_code: *const ::std::os::raw::c_void,
+        p_code: *const ::core::ffi::c_void,
         p_module: *mut SpvReflectShaderModule,
     ) -> SpvReflectResult;
 }
@@ -2602,14 +2602,14 @@ extern "C" {
     pub fn spvReflectCreateShaderModule2(
         flags: SpvReflectModuleFlags,
         size: usize,
-        p_code: *const ::std::os::raw::c_void,
+        p_code: *const ::core::ffi::c_void,
         p_module: *mut SpvReflectShaderModule,
     ) -> SpvReflectResult;
 }
 extern "C" {
     pub fn spvReflectGetShaderModule(
         size: usize,
-        p_code: *const ::std::os::raw::c_void,
+        p_code: *const ::core::ffi::c_void,
         p_module: *mut SpvReflectShaderModule,
     ) -> SpvReflectResult;
 }
@@ -2629,7 +2629,7 @@ extern "C" {
     #[doc = " @fn spvReflectGetEntryPoint\n\n@param  p_module     Pointer to an instance of SpvReflectShaderModule.\n@param  entry_point  Name of the requested entry point.\n@return              Returns a const pointer to the requested entry point,\nor NULL if it's not found."]
     pub fn spvReflectGetEntryPoint(
         p_module: *const SpvReflectShaderModule,
-        entry_point: *const ::std::os::raw::c_char,
+        entry_point: *const ::core::ffi::c_char,
     ) -> *const SpvReflectEntryPoint;
 }
 extern "C" {
@@ -2644,7 +2644,7 @@ extern "C" {
     #[doc = " @fn spvReflectEnumerateEntryPointDescriptorBindings\n@brief  Creates a listing of all descriptor bindings that are used in the\nstatic call tree of the given entry point.\n@param  p_module     Pointer to an instance of SpvReflectShaderModule.\n@param  entry_point  The name of the entry point to get the descriptor bindings for.\n@param  p_count      If pp_bindings is NULL, the entry point's descriptor binding\ncount (across all descriptor sets) will be stored here.\nIf pp_bindings is not NULL, *p_count must contain the\nentry points's descriptor binding count.\n@param  pp_bindings  If NULL, the entry point's total descriptor binding count\nwill be written to *p_count.\nIf non-NULL, pp_bindings must point to an array with\np_count entries, where pointers to the entry point's\ndescriptor bindings will be written. The caller must not\nfree the binding pointers written to this array.\n@return              If successful, returns SPV_REFLECT_RESULT_SUCCESS.\nOtherwise, the error code indicates the cause of the\nfailure."]
     pub fn spvReflectEnumerateEntryPointDescriptorBindings(
         p_module: *const SpvReflectShaderModule,
-        entry_point: *const ::std::os::raw::c_char,
+        entry_point: *const ::core::ffi::c_char,
         p_count: *mut u32,
         pp_bindings: *mut *mut SpvReflectDescriptorBinding,
     ) -> SpvReflectResult;
@@ -2661,7 +2661,7 @@ extern "C" {
     #[doc = " @fn spvReflectEnumerateEntryPointDescriptorSets\n@brief  Creates a listing of all descriptor sets and their bindings that are\nused in the static call tree of a given entry point.\n@param  p_module    Pointer to an instance of SpvReflectShaderModule.\n@param  entry_point The name of the entry point to get the descriptor bindings for.\n@param  p_count     If pp_sets is NULL, the module's descriptor set\ncount will be stored here.\nIf pp_sets is not NULL, *p_count must contain the\nmodule's descriptor set count.\n@param  pp_sets     If NULL, the module's total descriptor set count\nwill be written to *p_count.\nIf non-NULL, pp_sets must point to an array with\np_count entries, where pointers to the module's\ndescriptor sets will be written. The caller must not\nfree the descriptor set pointers written to this array.\n@return             If successful, returns SPV_REFLECT_RESULT_SUCCESS.\nOtherwise, the error code indicates the cause of the\nfailure."]
     pub fn spvReflectEnumerateEntryPointDescriptorSets(
         p_module: *const SpvReflectShaderModule,
-        entry_point: *const ::std::os::raw::c_char,
+        entry_point: *const ::core::ffi::c_char,
         p_count: *mut u32,
         pp_sets: *mut *mut SpvReflectDescriptorSet,
     ) -> SpvReflectResult;
@@ -2678,7 +2678,7 @@ extern "C" {
     #[doc = " @fn spvReflectEnumerateEntryPointInterfaceVariables\n@brief  Enumerate the interface variables for a given entry point.\n@param  entry_point The name of the entry point to get the interface variables for.\n@param  p_module      Pointer to an instance of SpvReflectShaderModule.\n@param  p_count       If pp_variables is NULL, the entry point's interface variable\ncount will be stored here.\nIf pp_variables is not NULL, *p_count must contain\nthe entry point's interface variable count.\n@param  pp_variables  If NULL, the entry point's interface variable count will be\nwritten to *p_count.\nIf non-NULL, pp_variables must point to an array with\np_count entries, where pointers to the entry point's\ninterface variables will be written. The caller must not\nfree the interface variables written to this array.\n@return               If successful, returns SPV_REFLECT_RESULT_SUCCESS.\nOtherwise, the error code indicates the cause of the\nfailure."]
     pub fn spvReflectEnumerateEntryPointInterfaceVariables(
         p_module: *const SpvReflectShaderModule,
-        entry_point: *const ::std::os::raw::c_char,
+        entry_point: *const ::core::ffi::c_char,
         p_count: *mut u32,
         pp_variables: *mut *mut SpvReflectInterfaceVariable,
     ) -> SpvReflectResult;
@@ -2695,7 +2695,7 @@ extern "C" {
     #[doc = " @fn spvReflectEnumerateEntryPointInputVariables\n@brief  Enumerate the input variables for a given entry point.\n@param  entry_point The name of the entry point to get the input variables for.\n@param  p_module      Pointer to an instance of SpvReflectShaderModule.\n@param  p_count       If pp_variables is NULL, the entry point's input variable\ncount will be stored here.\nIf pp_variables is not NULL, *p_count must contain\nthe entry point's input variable count.\n@param  pp_variables  If NULL, the entry point's input variable count will be\nwritten to *p_count.\nIf non-NULL, pp_variables must point to an array with\np_count entries, where pointers to the entry point's\ninput variables will be written. The caller must not\nfree the interface variables written to this array.\n@return               If successful, returns SPV_REFLECT_RESULT_SUCCESS.\nOtherwise, the error code indicates the cause of the\nfailure."]
     pub fn spvReflectEnumerateEntryPointInputVariables(
         p_module: *const SpvReflectShaderModule,
-        entry_point: *const ::std::os::raw::c_char,
+        entry_point: *const ::core::ffi::c_char,
         p_count: *mut u32,
         pp_variables: *mut *mut SpvReflectInterfaceVariable,
     ) -> SpvReflectResult;
@@ -2712,7 +2712,7 @@ extern "C" {
     #[doc = " @fn spvReflectEnumerateEntryPointOutputVariables\n@brief  Enumerate the output variables for a given entry point.\n@param  p_module      Pointer to an instance of SpvReflectShaderModule.\n@param  entry_point   The name of the entry point to get the output variables for.\n@param  p_count       If pp_variables is NULL, the entry point's output variable\ncount will be stored here.\nIf pp_variables is not NULL, *p_count must contain\nthe entry point's output variable count.\n@param  pp_variables  If NULL, the entry point's output variable count will be\nwritten to *p_count.\nIf non-NULL, pp_variables must point to an array with\np_count entries, where pointers to the entry point's\noutput variables will be written. The caller must not\nfree the interface variables written to this array.\n@return               If successful, returns SPV_REFLECT_RESULT_SUCCESS.\nOtherwise, the error code indicates the cause of the\nfailure."]
     pub fn spvReflectEnumerateEntryPointOutputVariables(
         p_module: *const SpvReflectShaderModule,
-        entry_point: *const ::std::os::raw::c_char,
+        entry_point: *const ::core::ffi::c_char,
         p_count: *mut u32,
         pp_variables: *mut *mut SpvReflectInterfaceVariable,
     ) -> SpvReflectResult;
@@ -2736,7 +2736,7 @@ extern "C" {
     #[doc = " @fn spvReflectEnumerateEntryPointPushConstantBlocks\n@brief  Enumerate the push constant blocks used in the static call tree of a\ngiven entry point.\n@param  p_module   Pointer to an instance of SpvReflectShaderModule.\n@param  p_count    If pp_blocks is NULL, the entry point's push constant\nblock count will be stored here.\nIf pp_blocks is not NULL, *p_count must\ncontain the entry point's push constant block count.\n@param  pp_blocks  If NULL, the entry point's push constant block count\nwill be written to *p_count.\nIf non-NULL, pp_blocks must point to an\narray with *p_count entries, where pointers to\nthe entry point's push constant blocks will be written.\nThe caller must not free the block variables written\nto this array.\n@return            If successful, returns SPV_REFLECT_RESULT_SUCCESS.\nOtherwise, the error code indicates the cause of the\nfailure."]
     pub fn spvReflectEnumerateEntryPointPushConstantBlocks(
         p_module: *const SpvReflectShaderModule,
-        entry_point: *const ::std::os::raw::c_char,
+        entry_point: *const ::core::ffi::c_char,
         p_count: *mut u32,
         pp_blocks: *mut *mut SpvReflectBlockVariable,
     ) -> SpvReflectResult;
@@ -2762,7 +2762,7 @@ extern "C" {
     #[doc = " @fn spvReflectGetEntryPointDescriptorBinding\n@brief  Get the descriptor binding with the given binding number and set\nnumber that is used in the static call tree of a certain entry\npoint.\n@param  p_module        Pointer to an instance of SpvReflectShaderModule.\n@param  entry_point     The entry point to get the binding from.\n@param  binding_number  The \"binding\" value of the requested descriptor\nbinding.\n@param  set_number      The \"set\" value of the requested descriptor binding.\n@param  p_result        If successful, SPV_REFLECT_RESULT_SUCCESS will be\nwritten to *p_result. Otherwise, a error code\nindicating the cause of the failure will be stored\nhere.\n@return                 If the entry point contains a descriptor binding that\nmatches the provided [binding_number, set_number]\nvalues, a pointer to that binding is returned. The\ncaller must not free this pointer.\nIf no match can be found, or if an unrelated error\noccurs, the return value will be NULL. Detailed\nerror results are written to *pResult.\n@note                    If the entry point contains multiple desriptor bindings\nwith the same set and binding numbers, there are\nno guarantees about which binding will be returned."]
     pub fn spvReflectGetEntryPointDescriptorBinding(
         p_module: *const SpvReflectShaderModule,
-        entry_point: *const ::std::os::raw::c_char,
+        entry_point: *const ::core::ffi::c_char,
         binding_number: u32,
         set_number: u32,
         p_result: *mut SpvReflectResult,
@@ -2780,7 +2780,7 @@ extern "C" {
     #[doc = " @fn spvReflectGetEntryPointDescriptorSet\n\n@param  p_module    Pointer to an instance of SpvReflectShaderModule.\n@param  entry_point The entry point to get the descriptor set from.\n@param  set_number  The \"set\" value of the requested descriptor set.\n@param  p_result    If successful, SPV_REFLECT_RESULT_SUCCESS will be\nwritten to *p_result. Otherwise, a error code\nindicating the cause of the failure will be stored\nhere.\n@return             If the entry point contains a descriptor set with the\nprovided set_number, a pointer to that set is\nreturned. The caller must not free this pointer.\nIf no match can be found, or if an unrelated error\noccurs, the return value will be NULL. Detailed\nerror results are written to *pResult."]
     pub fn spvReflectGetEntryPointDescriptorSet(
         p_module: *const SpvReflectShaderModule,
-        entry_point: *const ::std::os::raw::c_char,
+        entry_point: *const ::core::ffi::c_char,
         set_number: u32,
         p_result: *mut SpvReflectResult,
     ) -> *const SpvReflectDescriptorSet;
@@ -2802,7 +2802,7 @@ extern "C" {
 extern "C" {
     pub fn spvReflectGetEntryPointInputVariableByLocation(
         p_module: *const SpvReflectShaderModule,
-        entry_point: *const ::std::os::raw::c_char,
+        entry_point: *const ::core::ffi::c_char,
         location: u32,
         p_result: *mut SpvReflectResult,
     ) -> *const SpvReflectInterfaceVariable;
@@ -2810,15 +2810,15 @@ extern "C" {
 extern "C" {
     pub fn spvReflectGetInputVariableBySemantic(
         p_module: *const SpvReflectShaderModule,
-        semantic: *const ::std::os::raw::c_char,
+        semantic: *const ::core::ffi::c_char,
         p_result: *mut SpvReflectResult,
     ) -> *const SpvReflectInterfaceVariable;
 }
 extern "C" {
     pub fn spvReflectGetEntryPointInputVariableBySemantic(
         p_module: *const SpvReflectShaderModule,
-        entry_point: *const ::std::os::raw::c_char,
-        semantic: *const ::std::os::raw::c_char,
+        entry_point: *const ::core::ffi::c_char,
+        semantic: *const ::core::ffi::c_char,
         p_result: *mut SpvReflectResult,
     ) -> *const SpvReflectInterfaceVariable;
 }
@@ -2839,7 +2839,7 @@ extern "C" {
 extern "C" {
     pub fn spvReflectGetEntryPointOutputVariableByLocation(
         p_module: *const SpvReflectShaderModule,
-        entry_point: *const ::std::os::raw::c_char,
+        entry_point: *const ::core::ffi::c_char,
         location: u32,
         p_result: *mut SpvReflectResult,
     ) -> *const SpvReflectInterfaceVariable;
@@ -2847,15 +2847,15 @@ extern "C" {
 extern "C" {
     pub fn spvReflectGetOutputVariableBySemantic(
         p_module: *const SpvReflectShaderModule,
-        semantic: *const ::std::os::raw::c_char,
+        semantic: *const ::core::ffi::c_char,
         p_result: *mut SpvReflectResult,
     ) -> *const SpvReflectInterfaceVariable;
 }
 extern "C" {
     pub fn spvReflectGetEntryPointOutputVariableBySemantic(
         p_module: *const SpvReflectShaderModule,
-        entry_point: *const ::std::os::raw::c_char,
-        semantic: *const ::std::os::raw::c_char,
+        entry_point: *const ::core::ffi::c_char,
+        semantic: *const ::core::ffi::c_char,
         p_result: *mut SpvReflectResult,
     ) -> *const SpvReflectInterfaceVariable;
 }
@@ -2878,7 +2878,7 @@ extern "C" {
     #[doc = " @fn spvReflectGetEntryPointPushConstantBlock\n@brief  Get the push constant block corresponding to the given entry point.\nAs by the Vulkan specification there can be no more than one push\nconstant block used by a given entry point, so if there is one it will\nbe returned, otherwise NULL will be returned.\n@param  p_module     Pointer to an instance of SpvReflectShaderModule.\n@param  entry_point  The entry point to get the push constant block from.\n@param  p_result     If successful, SPV_REFLECT_RESULT_SUCCESS will be\nwritten to *p_result. Otherwise, a error code\nindicating the cause of the failure will be stored\nhere.\n@return              If the provided index is within range, a pointer to\nthe corresponding push constant block is returned.\nThe caller must not free this pointer.\nIf no match can be found, or if an unrelated error\noccurs, the return value will be NULL. Detailed\nerror results are written to *pResult."]
     pub fn spvReflectGetEntryPointPushConstantBlock(
         p_module: *const SpvReflectShaderModule,
-        entry_point: *const ::std::os::raw::c_char,
+        entry_point: *const ::core::ffi::c_char,
         p_result: *mut SpvReflectResult,
     ) -> *const SpvReflectBlockVariable;
 }
@@ -2925,13 +2925,11 @@ extern "C" {
 }
 extern "C" {
     #[doc = " @fn spvReflectSourceLanguage\n\n@param  source_lang  The source language code.\n@return Returns string of source language specified in \\a source_lang.\nThe caller must not free the memory associated with this string."]
-    pub fn spvReflectSourceLanguage(
-        source_lang: SpvSourceLanguage,
-    ) -> *const ::std::os::raw::c_char;
+    pub fn spvReflectSourceLanguage(source_lang: SpvSourceLanguage) -> *const ::core::ffi::c_char;
 }
 extern "C" {
     #[doc = " @fn spvReflectBlockVariableTypeName\n\n@param  p_var Pointer to block variable.\n@return Returns string of block variable's type description type name\nor NULL if p_var is NULL."]
     pub fn spvReflectBlockVariableTypeName(
         p_var: *const SpvReflectBlockVariable,
-    ) -> *const ::std::os::raw::c_char;
+    ) -> *const ::core::ffi::c_char;
 }
