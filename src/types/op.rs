@@ -1,7 +1,7 @@
 use crate::ffi;
+use core::ops::Deref;
 use num_traits::cast::FromPrimitive;
 use spirv;
-use core::ops::Deref;
 
 #[derive(Debug, Copy, Clone, PartialEq)]
 pub struct ReflectOp(spirv::Op);

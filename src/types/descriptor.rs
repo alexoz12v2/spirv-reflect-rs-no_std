@@ -4,9 +4,9 @@ use crate::types::{
     ReflectTypeDescription,
 };
 #[cfg(not(feature = "std"))]
-use alloc::{string::String, vec::Vec, boxed::Box};
+use alloc::{boxed::Box, string::String, vec::Vec};
 #[cfg(feature = "std")]
-use std::{string::String, vec::Vec, boxed::Box};
+use std::{boxed::Box, string::String, vec::Vec};
 
 #[derive(Debug, Copy, Clone, Serialize, PartialEq)]
 pub enum ReflectDescriptorType {

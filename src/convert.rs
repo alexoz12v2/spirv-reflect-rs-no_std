@@ -1,13 +1,13 @@
 use crate::ffi;
 use crate::types::*;
-use num_traits::cast::FromPrimitive;
-use core::slice;
 #[cfg(not(feature = "std"))]
 use alloc::{
+    boxed::Box,
     string::{String, ToString},
     vec::Vec,
-    boxed::Box,
 };
+use core::slice;
+use num_traits::cast::FromPrimitive;
 
 unsafe fn ffi_slice_from_raw_parts<'a, T>(data: *const T, len: usize) -> &'a [T] {
     if len > 0 {
