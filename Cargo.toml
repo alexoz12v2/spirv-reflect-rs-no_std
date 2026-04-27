@@ -37,7 +37,7 @@ maintenance = { status = "actively-developed" }
 
 [dependencies]
 bitflags = "1.2.1"
-spirv = "0.2"
+spirv = "0.4.0+sdk-1.4.341.0"
 num-traits = { version = "0.2.8", default-features = false }
 serde = { version = "1.0", default-features = false }
 serde_derive = "1.0.102"
