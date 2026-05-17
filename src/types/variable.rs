@@ -157,6 +157,7 @@ pub enum ReflectStorageClass {
     AtomicCounter,
     Image,
     StorageBuffer,
+    PhysicalStorageBuffer,
 }
 
 impl Default for ReflectStorageClass {
