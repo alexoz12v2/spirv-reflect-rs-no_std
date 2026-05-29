@@ -16,6 +16,8 @@ fn main() {
         build.file(&source_file);
     }
 
+    build.flag("-x").flag("c++");
+
     let target = env::var("TARGET").unwrap();
     if target.contains("darwin") {
         build
